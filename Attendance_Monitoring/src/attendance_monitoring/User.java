@@ -617,7 +617,7 @@ public class User extends javax.swing.JFrame {
                 int identify = Integer.parseInt(tableModel.getValueAt(selectedRow, 0).toString());
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/monitoring_attendance", "root", "");
-                PreparedStatement st = con.prepareStatement("delete from login where id= ?");
+                PreparedStatement st = con.prepareStatement("delete from user where id= ?");
                 st.setInt(1, identify);
                 st.executeUpdate();
                 tableModel.removeRow(selectedRow);
@@ -684,7 +684,7 @@ public class User extends javax.swing.JFrame {
            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/monitoring_attendance", "root", "");
            Statement stmt = con.createStatement();
          
-           ResultSet datas = stmt.executeQuery("SELECT * FROM login");
+           ResultSet datas = stmt.executeQuery("SELECT * FROM user");
            DefaultTableModel model = (DefaultTableModel) UserTable.getModel();
            while (datas.next()) {
                count = 1;

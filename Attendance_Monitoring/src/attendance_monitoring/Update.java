@@ -178,12 +178,12 @@ public class Update extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
         jLabel5.setText("Lastname:");
-        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
-        jPanel5.add(fNameTexField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 297, 39));
+        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
+        jPanel5.add(fNameTexField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 297, 39));
 
         jLabel6.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
         jLabel6.setText("Firstname:");
-        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
         jLabel7.setText("Gender:");
@@ -191,10 +191,10 @@ public class Update extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
         jLabel8.setText("Position:");
-        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
-        jPanel5.add(departmentField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 297, 39));
+        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
+        jPanel5.add(departmentField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 297, 39));
         jPanel5.add(genderField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 297, 39));
-        jPanel5.add(lNameTexField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 297, 39));
+        jPanel5.add(lNameTexField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 297, 39));
 
         cancelBtn.setBackground(new java.awt.Color(249, 5, 19));
         cancelBtn.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
@@ -230,18 +230,18 @@ public class Update extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
         jLabel16.setText("Email Addresss:");
-        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, -1, -1));
-        jPanel5.add(addressField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 297, 39));
+        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+        jPanel5.add(addressField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 297, 39));
 
         jLabel17.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
         jLabel17.setText("Address:");
-        jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
+        jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
         jLabel18.setText("Department:");
-        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
-        jPanel5.add(positionField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 297, 39));
-        jPanel5.add(emailAddField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 297, 39));
+        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+        jPanel5.add(positionField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 297, 39));
+        jPanel5.add(emailAddField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 297, 39));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -254,8 +254,9 @@ public class Update extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
+                .addGap(5, 5, 5))
         );
 
         pack();
@@ -276,12 +277,12 @@ public class Update extends javax.swing.JFrame {
     }//GEN-LAST:event_cancelBtnActionPerformed
 
     private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
+        String emailAddress = emailAddField.getText();
         String firstName = fNameTexField.getText();
         String lastName = lNameTexField.getText();
         String department = departmentField.getText();
         String position = positionField.getText();
         String address = addressField.getText();
-        String emailAddress = emailAddField.getText();
         String gender  = genderField.getText();
 //        String password = passField.getText();
         
@@ -290,7 +291,7 @@ public class Update extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver"); //load the driver
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/monitoring_attendance", "root", ""); //establishes the connection
             Statement stmt = (Statement) con.createStatement(); //get the connection stream(connection port)
-            String query = "UPDATE employeetable SET firstName= '"+firstName+"',lastName='"+lastName+"',department='"+department+"',position='"+position+"',address='"+address+"',gender='"+gender+"',emailAddress='"+emailAddress+"' WHERE employee_id= '"+new add_employee().ID+"'";
+            String query = "UPDATE employeetable SET emailAddress='"+emailAddress+"',firstName= '"+firstName+"',lastName='"+lastName+"',department='"+department+"',position='"+position+"',address='"+address+"',gender='"+gender+"' WHERE employee_id= '"+new add_employee().ID+"'";
             stmt.executeUpdate(query);
             JOptionPane.showMessageDialog(null, "Successfully Updated");
             new add_employee().setVisible(true);

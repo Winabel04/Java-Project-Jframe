@@ -164,13 +164,13 @@ public class User_Add extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver"); //load the driver
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/monitoring_attendance", "root", ""); //establishes the connection
             Statement stmt = (Statement) con.createStatement(); //get the connection stream(connection port)
-            String query = "INSERT INTO login (id, username,password,gender) VALUES (NULL,'"+emailAddress+"','"+String.valueOf(password)+"','"+gender+"')";
+            String query = "INSERT INTO user (id, username,password,gender) VALUES (NULL,'"+emailAddress+"','"+String.valueOf(password)+"','"+gender+"')";
             stmt.executeUpdate(query);
             stmt.executeUpdate(query);
             JOptionPane.showMessageDialog(null, "Successfully Added");
             
             this.setVisible(false);
-            new add_employee().setVisible(true);
+            new User().setVisible(true);
             con.close();
         } catch (Exception e) {
 //            System.out.println(e);

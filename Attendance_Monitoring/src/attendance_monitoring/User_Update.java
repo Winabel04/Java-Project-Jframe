@@ -160,7 +160,7 @@ public class User_Update extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver"); //load the driver
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/monitoring_attendance", "root", ""); //establishes the connection
             Statement stmt = (Statement) con.createStatement(); //get the connection stream(connection port)
-            String query = "UPDATE `login` SET `username`='"+emailAddress+"',`password`='"+String.valueOf(password)+"',`gender`='"+gender+"' WHERE `id`= '"+new User().ID+"'";
+            String query = "UPDATE `user` SET `username`='"+emailAddress+"',`password`='"+String.valueOf(password)+"',`gender`='"+gender+"' WHERE `id`= '"+new User().ID+"'";
             stmt.executeUpdate(query);
             JOptionPane.showMessageDialog(null, "Successfully Updated");
             new User().setVisible(true);

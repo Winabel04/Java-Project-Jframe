@@ -199,7 +199,7 @@ public class add_form extends javax.swing.JFrame {
             Statement stmt = (Statement) con.createStatement(); //get the connection stream(connection port)
             String info = "INSERT INTO `login`(`username`, `password`, `gender`) VALUES ('"+emailAddress+"','"+password+"','"+gender+"')";
             String query = "INSERT INTO employeetable(employee_id, firstName, lastName, department, position, address, gender, emailAddress, password) VALUES (NULL,'"+firstName+"','"+lastName+"','"+department+"','"+position+"','"+address+"','"+gender+"','"+emailAddress+"','"+password+"')";
-            stmt.executeUpdate(query);
+//            stmt.executeUpdate(query);
             stmt.executeUpdate(query);
             JOptionPane.showMessageDialog(null, "Successfully Added");
             

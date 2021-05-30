@@ -575,27 +575,28 @@ public class add_employee extends javax.swing.JFrame {
         DefaultTableModel tableModel = (DefaultTableModel) EmployeeTable.getModel();
         int selectedRow = EmployeeTable.getSelectedRow();
         ID=tableModel.getValueAt(selectedRow, 0).toString();
-        String firstname = tableModel.getValueAt(selectedRow, 1).toString();
-        String lastname = tableModel.getValueAt(selectedRow, 2).toString();
-        String department = tableModel.getValueAt(selectedRow, 3).toString();
-        String position = tableModel.getValueAt(selectedRow, 4).toString();
-        String address = tableModel.getValueAt(selectedRow, 5).toString();
-        String gender = tableModel.getValueAt(selectedRow, 6).toString();
-        String email = tableModel.getValueAt(selectedRow, 7).toString();
+        String email = tableModel.getValueAt(selectedRow, 1).toString();
+        String firstname = tableModel.getValueAt(selectedRow, 2).toString();
+        String lastname = tableModel.getValueAt(selectedRow, 3).toString();
+        String department = tableModel.getValueAt(selectedRow, 4).toString();
+        String position = tableModel.getValueAt(selectedRow, 5).toString();
+        String address = tableModel.getValueAt(selectedRow, 6).toString();
+        String gender = tableModel.getValueAt(selectedRow, 7).toString();
+        
 //        String password = tableModel.getValueAt(selectedRow, 8).toString();
       
         
        
         up.pack();
         up.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
+        up.emailAddField.setText(email);
         up.fNameTexField.setText(firstname);
         up.lNameTexField.setText(lastname);
         up.departmentField.setText(department);
         up.positionField.setText(position);
         up.addressField.setText(address);
         up.genderField.setText(gender);
-        up.emailAddField.setText(email);
+        
 //        up.passField.setText(password);
  
        
