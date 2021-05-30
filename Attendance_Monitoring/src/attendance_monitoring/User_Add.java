@@ -166,7 +166,6 @@ public class User_Add extends javax.swing.JFrame {
             Statement stmt = (Statement) con.createStatement(); //get the connection stream(connection port)
             String query = "INSERT INTO user (id, username,password,gender) VALUES (NULL,'"+emailAddress+"','"+String.valueOf(password)+"','"+gender+"')";
             stmt.executeUpdate(query);
-            stmt.executeUpdate(query);
             JOptionPane.showMessageDialog(null, "Successfully Added");
             
             this.setVisible(false);
