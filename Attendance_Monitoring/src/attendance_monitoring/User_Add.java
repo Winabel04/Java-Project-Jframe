@@ -65,10 +65,10 @@ public class User_Add extends javax.swing.JFrame {
             }
         });
 
-        updateBtn.setBackground(new java.awt.Color(0, 204, 204));
+        updateBtn.setBackground(new java.awt.Color(0, 153, 255));
         updateBtn.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
-        updateBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\2ndyrGroupA\\Documents\\NetBeansProjects\\Attendance_Monitoring\\src\\images_java\\edit-icon.png")); // NOI18N
-        updateBtn.setText("Update");
+        updateBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\2ndyrGroupA\\Documents\\NetBeansProjects\\Attendance_Monitoring\\src\\images_java\\add-icon.png")); // NOI18N
+        updateBtn.setText("Add");
         updateBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 updateBtnMouseClicked(evt);
@@ -165,7 +165,7 @@ public class User_Add extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/monitoring_attendance", "root", ""); //establishes the connection
             Statement stmt = (Statement) con.createStatement(); //get the connection stream(connection port)
             String query = "INSERT INTO user (id, username,password,gender) VALUES (NULL,'"+emailAddress+"','"+String.valueOf(password)+"','"+gender+"')";
-            stmt.executeUpdate(query);
+//            stmt.executeUpdate(query);
             stmt.executeUpdate(query);
             JOptionPane.showMessageDialog(null, "Successfully Added");
             

@@ -246,7 +246,7 @@ public class login extends javax.swing.JFrame {
             this.setVisible(false);
             new DashBoard().setVisible(true);
         }else{
-            JOptionPane.showMessageDialog(null, "UnSuccessfully Login");
+            JOptionPane.showMessageDialog(null, "UnSuccessfully Login, username and password doesn't match the admins' account..");
             userNameTextField.setText(" ");
             passwordTextField.setText("");
         }

@@ -243,7 +243,7 @@ public class Attendance extends javax.swing.JFrame {
 
         addBtn.setBackground(new java.awt.Color(0, 153, 255));
         addBtn.setFont(new java.awt.Font("Franklin Gothic Medium", 2, 24)); // NOI18N
-        addBtn.setText("Add");
+        addBtn.setText("Employee");
         addBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addBtnMouseClicked(evt);

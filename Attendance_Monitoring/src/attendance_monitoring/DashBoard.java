@@ -222,7 +222,7 @@ public class DashBoard extends javax.swing.JFrame {
 
         AddBtn.setBackground(new java.awt.Color(0, 153, 255));
         AddBtn.setFont(new java.awt.Font("Franklin Gothic Medium", 2, 24)); // NOI18N
-        AddBtn.setText("Add");
+        AddBtn.setText("Employee");
         AddBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AddBtnMouseClicked(evt);
