@@ -165,7 +165,10 @@ public class User_Add extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/monitoring_attendance", "root", ""); //establishes the connection
             Statement stmt = (Statement) con.createStatement(); //get the connection stream(connection port)
             String query = "INSERT INTO user (id, username,password,gender) VALUES (NULL,'"+emailAddress+"','"+String.valueOf(password)+"','"+gender+"')";
+<<<<<<< HEAD
 //            stmt.executeUpdate(query);
+=======
+>>>>>>> 18fd56e3d4ddbdc90e0e443851eaf9f06c01a731
             stmt.executeUpdate(query);
             JOptionPane.showMessageDialog(null, "Successfully Added");
             
